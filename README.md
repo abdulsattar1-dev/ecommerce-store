@@ -1,16 +1,38 @@
-# React + Vite
+# 🛒 E-commerce Store
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+An online store frontend with products, product details, a shopping cart and a checkout form.
 
-Currently, two official plugins are available:
+**🔗 Live demo:** _add your Vercel link here_
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## ✨ Features
+- Home page with top-rated products and shop-by-category
+- Products page with **search** and **category filter**
+- Product details page with an image gallery
+- Shopping cart: add, increase / decrease quantity, remove, total price
+- Cart is saved in the browser — it stays after refresh
+- Checkout form with validation and an order confirmation
 
-## React Compiler
+## 🧠 What I learned
+- Building a multi-page shop with React Router
+- Global cart state with the Context API
+- Search + filter on the same list
+- Form validation with an errors object
+- Reading URL query params (`?category=`)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+> **Note:** This is a frontend demo. Products come from the free DummyJSON API, and orders are not really sent or paid.
 
-## Expanding the Oxlint configuration
+## 🛠️ Run it on your computer
+```bash
+git clone https://github.com/abdulsattarnangri7-desktoop/ecommerce-store.git
+cd ecommerce-store
+npm install
+npm run dev
+```
+Then open http://localhost:5173
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+## 📦 Built with
+React 19 · Vite · React Router · Context API · DummyJSON API · localStorage
+
+## 👤 Author
+**Abdul Sattar** — WordPress & React Developer
+[GitHub](https://github.com/abdulsattarnangri7-desktoop) · [Portfolio](http://abdulsattarportfolio.free.nf)
