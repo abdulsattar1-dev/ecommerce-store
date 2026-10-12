@@ -23,7 +23,7 @@ An online store frontend with products, product details, a shopping cart and a c
 
 ## 🛠️ Run it on your computer
 ```bash
-git clone https://github.com/abdulsattarnangri7-desktoop/ecommerce-store.git
+git clone https://github.com/abdulsattar1-dev/ecommerce-store.git
 cd ecommerce-store
 npm install
 npm run dev
@@ -35,4 +35,4 @@ React 19 · Vite · React Router · Context API · DummyJSON API · localStorage
 
 ## 👤 Author
 **Abdul Sattar** — WordPress & React Developer
-[GitHub](https://github.com/abdulsattarnangri7-desktoop) · [Portfolio](http://abdulsattarportfolio.free.nf)
+[GitHub](https://github.com/abdulsattar1-dev) · [Portfolio](http://abdulsattarportfolio.free.nf)
