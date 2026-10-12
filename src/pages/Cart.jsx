@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { useCart } from "../context/CartContext";
 
 function Cart() {
-  const { cart, increase, decrease, removeFromCart, clearCart, totalItems, totalPrice } = useCart();
+  const { cart, increase, decrease, removeFromCart, clearCart, totalItems, totalPrice, shipping, grandTotal, amountForFreeShipping } = useCart();
 
   if (cart.length === 0) {
     return (
@@ -54,14 +54,25 @@ function Cart() {
             <span>{totalItems}</span>
           </div>
           <div className="summary-row">
-            <span>Shipping</span>
-            <span>Free</span>
-          </div>
-          <div className="summary-row total">
-            <span>Total</span>
+            <span>Subtotal</span>
             <span>${totalPrice.toFixed(2)}</span>
           </div>
-          <button className="add-btn full">Checkout</button>
+          <div className="summary-row">
+            <span>Shipping</span>
+            <span>{shipping === 0 ? "Free" : `$${shipping.toFixed(2)}`}</span>
+          </div>
+          {amountForFreeShipping > 0 && (
+            <p className="free-shipping-note">
+              Add ${amountForFreeShipping.toFixed(2)} more for free shipping 🚚
+            </p>
+          )}
+          <div className="summary-row total">
+            <span>Total</span>
+            <span>${grandTotal.toFixed(2)}</span>
+          </div>
+          <Link to="/checkout" className="add-btn full">
+            Checkout
+          </Link>
         </div>
       </div>
     </div>

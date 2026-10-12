@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { useCart } from "../context/CartContext";
 
 function Checkout() {
-  const { cart, totalItems, totalPrice, clearCart } = useCart();
+  const { cart, totalItems, totalPrice, shipping, grandTotal, clearCart } = useCart();
   const [form, setForm] = useState({
     name: "",
     email: "",
@@ -106,7 +106,7 @@ function Checkout() {
           </select>
 
           <button type="submit" className="add-btn full">
-            Place Order (${totalPrice.toFixed(2)})
+            Place Order (${grandTotal.toFixed(2)})
           </button>
         </form>
 
@@ -124,9 +124,17 @@ function Checkout() {
             <span>Items</span>
             <span>{totalItems}</span>
           </div>
+          <div className="summary-row">
+            <span>Subtotal</span>
+            <span>${totalPrice.toFixed(2)}</span>
+          </div>
+          <div className="summary-row">
+            <span>Shipping</span>
+            <span>{shipping === 0 ? "Free" : `$${shipping.toFixed(2)}`}</span>
+          </div>
           <div className="summary-row total">
             <span>Total</span>
-            <span>${totalPrice.toFixed(2)}</span>
+            <span>${grandTotal.toFixed(2)}</span>
           </div>
         </div>
       </div>

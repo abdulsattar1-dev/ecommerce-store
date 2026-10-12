@@ -316,6 +316,9 @@ body {
 
 .add-btn.full {
   width: 100%;
+  display: block;
+  text-align: center;
+  text-decoration: none;
 }
 
 /* ===== Reviews ===== */
@@ -755,4 +758,9 @@ body {
   .footer-links a {
     margin: 0 20px 0 0;
   }
+}
+.free-shipping-note {
+  font-size: 14px;
+  color: #6c5ce7;
+  margin: 8px 0;
 }

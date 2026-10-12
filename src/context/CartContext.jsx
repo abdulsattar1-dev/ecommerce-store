@@ -61,9 +61,15 @@ export function CartProvider({ children }) {
   const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
   const totalPrice = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
 
+  // Shipping: free from $50, otherwise $5
+  const FREE_SHIPPING_FROM = 50;
+  const shipping = totalPrice === 0 || totalPrice >= FREE_SHIPPING_FROM ? 0 : 5;
+  const grandTotal = totalPrice + shipping;
+  const amountForFreeShipping = Math.max(0, FREE_SHIPPING_FROM - totalPrice);
+
   return (
     <CartContext.Provider
-      value={{ cart, addToCart, increase, decrease, removeFromCart, clearCart, totalItems, totalPrice }}
+      value={{ cart, addToCart, increase, decrease, removeFromCart, clearCart, totalItems, totalPrice, shipping, grandTotal, amountForFreeShipping }}
     >
       {children}
     </CartContext.Provider>
