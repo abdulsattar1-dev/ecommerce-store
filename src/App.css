@@ -53,6 +53,7 @@ body {
 
 .cart-link {
   position: relative;
+  padding-right: 18px;
 }
 
 .badge {
