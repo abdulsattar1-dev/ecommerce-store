@@ -2,7 +2,7 @@
 
 An online store frontend with products, product details, a shopping cart and a checkout form.
 
-**🔗 Live demo:** _add your Vercel link here_
+**🔗 Live demo:** https://ecommerce-store-seven-lyart.vercel.app
 
 ## ✨ Features
 - Home page with top-rated products and shop-by-category
